@@ -10,3 +10,10 @@ with open('config.yml', 'r') as file:
 
 calib_data = pd.read_csv('calibrations.csv')
 sensor_data = pd.read_excel('sensors.xlsx')
+
+merged_data = pd.merge(
+    sensor_data,
+    calib_data,
+    on="sensor_id"
+)
+
