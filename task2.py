@@ -1,6 +1,8 @@
 
 import yaml 
 import pandas as pd
+import json
+
 
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
@@ -20,3 +22,7 @@ merged_data = pd.merge(
 overdue_data = merged_data[merged_data["days_since_calibration"] > max_days]
 
 overdue_sensors = overdue_data.to_dict(orient="records")
+
+with open(output, 'w') as file:
+    json.dump(overdue_sensors, file, indent=2)
+  
