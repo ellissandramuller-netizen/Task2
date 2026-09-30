@@ -19,6 +19,4 @@ merged_data = pd.merge(
 
 overdue_data = merged_data[merged_data["days_since_calibration"] > max_days]
 
-print(overdue_data)
-
-
+overdue_sensors = overdue_data.to_dict(orient="records")
