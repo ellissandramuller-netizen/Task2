@@ -30,3 +30,12 @@ overdue_sensors = overdue_data.to_dict(orient="records")
 # Skrive relevante sensorer og tilhørende data til JSON-fil
 with open(output, 'w') as file:
     json.dump(overdue_sensors, file, indent=2)
+
+"""
+I used ChatGPT as a learning and troubleshooting tool while completing the assignment. 
+I wrote the code myself and used AI to explain concepts and syntax I was unsure about, 
+including virtual environments, reading YAML/CSV/Excel files, merging and filtering pandas DataFrames, 
+converting data for JSON export, and using json.dump(). I also used AI to help interpret error messages 
+and Git behavior, and to review comments and PEP 8 formatting. The solution was developed and tested 
+incrementally by me.
+"""
